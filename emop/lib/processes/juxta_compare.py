@@ -38,7 +38,11 @@ class JuxtaCompare(ProcessesBase):
 
         proc = exec_cmd(cmd)
         if proc.exitcode != 0:
-            stderr = "JuxtaCompare of %s failed: %s" % (input_file, proc.stderr)
+            # TODO: juxta-cl.jar errors are going to stdout not stderr
+            if not proc.stdout and proc.stderr:
+                stderr = proc.stderr
+            else:
+                stderr = proc.stdout
             return self.results(stdout=proc.stdout, stderr=stderr, exitcode=proc.exitcode)
 
         out = proc.stdout.strip()
