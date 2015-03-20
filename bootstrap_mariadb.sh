@@ -22,6 +22,35 @@
 
 #########
 
+MYSQL_PORT=60${SLURM_JOB_ID: -3}
+
+find_conflicting_port() {
+    local CURRENT_JOBS JOB_PORT
+
+    CURRENT_JOBS=( $(squeue -o '%A' --noheader -w $SLURM_JOB_NODELIST | grep -v $SLURM_JOB_ID) )
+    for JOB in "${CURRENT_JOBS[@]}"; do
+        JOB_PORT=60${JOB: -3}
+        if [[ "$MYSQL_PORT" == "$JOB_PORT" ]]; then
+            echo "Current SLURM_JOB_ID ${SLURM_JOB_ID} port conflicts with job ${JOB}."
+            return 1
+        fi
+    done
+
+    if (: < /dev/tcp/127.0.0.1/${MYSQL_PORT}) 2>/dev/null; then
+        echo "MySQL port ${MYSQL_PORT} already taken."
+        return 1
+    fi
+
+    return 0
+}
+
+generate_port_number() {
+    until find_conflicting_port; do
+        MYSQL_PORT=$((MYSQL_PORT-1))
+    done
+    echo "Using MySQL port ${MYSQL_PORT}"
+}
+
 MY_CNF="${TMPDIR}/my.cnf"
 ROOT_DIR="${TMPDIR}/mariadb"
 TMP_DIR="${ROOT_DIR}/tmp"
@@ -31,7 +60,10 @@ DATA_DIR="${ROOT_DIR}/data"
 #SRC="/fdata/idhmc/parallel4/google_1grams/data"
 SRC="/fdata/idhmc/parallel6/google_1grams_opt/data"
 SOCKET="${ROOT_DIR}/mysql.sock"
-PORT=60${SLURM_JOB_ID: -3} #TODO This is a huge assumption about value of SLURM_JOB_ID > 1000
+
+generate_port_number
+
+PORT=${MYSQL_PORT}
 
 cat << EOF > ${TMPDIR}/emop.properties
 ctx_db_driver: com.mysql.jdbc.Driver
