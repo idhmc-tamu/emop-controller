@@ -52,6 +52,17 @@ class TestEmopSubmit(TestCase):
         self.assertEqual(num_jobs, 500)
         self.assertEqual(pages_per_job, 10)
 
+    def test_optimize_submit_single_page(self):
+        submit = self.get_submit(128, 300, 259200, 300)
+        num_jobs, pages_per_job = submit.optimize_submit(page_count=1, running_job_count=0)
+        self.assertEqual(num_jobs, 1)
+        self.assertEqual(pages_per_job, 1)
+
+    def test_optimize_submit_single_page_large_avg_runtime(self):
+        submit = self.get_submit(128, 300, 259200, 400)
+        num_jobs, pages_per_job = submit.optimize_submit(page_count=1, running_job_count=0)
+        self.assertEqual(num_jobs, 1)
+        self.assertEqual(pages_per_job, 1)
 
 def suite():
     return TestLoader().loadTestsFromTestCase(TestEmopSubmit)

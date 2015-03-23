@@ -66,9 +66,11 @@ class EmopSubmit(EmopBase):
         num_jobs = int(num_jobs)
         pages_per_job = int(pages_per_job)
 
-        # Incase num_jobs was type casted to 0
+        # Incase num_jobs and pages_per_job were type casted to 0
         if not num_jobs:
             num_jobs = 1
+        if not pages_per_job:
+            pages_per_job = 1
 
         expected_runtime = pages_per_job * self.settings.avg_page_runtime
         expected_runtime_msg = "Expected job runtime: %s seconds" % expected_runtime
