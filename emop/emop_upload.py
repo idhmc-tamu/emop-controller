@@ -47,7 +47,11 @@ class EmopUpload(EmopBase):
             return None
 
         with open(filename_path) as datafile:
-            data = json.load(datafile)
+            try:
+                data = json.load(datafile)
+            except ValueError:
+                logger.error("EmopUpload: Invalid JSON file %s" % filename_path)
+                return False
 
         uploaded = self.upload(data)
         if uploaded:
