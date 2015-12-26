@@ -1,11 +1,12 @@
 load("gcc/4.8.2")
-load("python/2.7.8")
+load("python/2.7.10")
 load("beautifulsoup4") --local
 load("leptonica/1.71")
 load("icu/52.1")
 --load("tesseract/3.03-rc1")
 load("tesseract/3.02-r889")
 load("java/1.7.0_67")
+load("globusonline-python27-api-client/0.10.18")
 
 if (mode() == "load") then
   if (not os.getenv("EMOP_HOME")) then

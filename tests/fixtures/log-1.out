@@ -1,0 +1,1351 @@
+871616 started on c0513.brazos.tamu.edu at Thu Jan 22 18:41:53 CST 2015
+-=-
+BOOTSTRAP TIME: 69
+mysqld_safe --defaults-file=/tmp/SLURM_871616_1380/my.cnf &>/dev/null &
+Waiting for MariaDB to start...
+START MARIADB TIME: 17
+Executing: srun python /home/treydock/git/emop-controller/emop.py -c /home/treydock/git/emop-controller/tests/system/config-idhmc-test.ini --mode run --force-run --proc-id ecco-small
+[2015-01-22T18:43:20] DEBUG: Found scheduler job ID environment variable SLURM_JOB_ID
+[2015-01-22T18:43:20] DEBUG: Found scheduler job ID environment variable SLURM_JOBID
+[2015-01-22T18:43:20] DEBUG: Loading payload from /home/treydock/git/emop-controller/tests/system/payload/input/ecco-small.json
+[2015-01-22T18:43:20] DEBUG: Payload: 
+[
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63310, 
+        "page": {
+            "id": 2179368, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00010.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/1.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 1, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63311, 
+        "page": {
+            "id": 2179369, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00020.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/2.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 2, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63312, 
+        "page": {
+            "id": 2179370, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00030.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/3.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 3, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63313, 
+        "page": {
+            "id": 2179371, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00040.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/4.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 4, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63314, 
+        "page": {
+            "id": 2179372, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00050.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/5.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 5, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63315, 
+        "page": {
+            "id": 2179373, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00060.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/6.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 6, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63316, 
+        "page": {
+            "id": 2179374, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00070.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/7.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 7, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63317, 
+        "page": {
+            "id": 2179375, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00080.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/8.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 8, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63318, 
+        "page": {
+            "id": 2179376, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00090.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/9.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 9, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }, 
+    {
+        "batch_job": {
+            "font": {
+                "font_bold": null, 
+                "font_fixed": null, 
+                "font_fraktur": null, 
+                "font_italic": null, 
+                "font_library_path": null, 
+                "font_line_height": null, 
+                "font_name": "SC8b-R7-D2b", 
+                "font_serif": null, 
+                "id": 207
+            }, 
+            "id": 17, 
+            "job_type": {
+                "id": 2, 
+                "name": "OCR"
+            }, 
+            "name": "for Anshul & Trey - Sc8b - ECCO TTS", 
+            "notes": "", 
+            "ocr_engine": {
+                "id": 2, 
+                "name": "Tesseract"
+            }, 
+            "parameters": ""
+        }, 
+        "id": 63319, 
+        "page": {
+            "id": 2179377, 
+            "pg_gale_ocr_file": "/data/shared/text-xml/ECCO-Gale-page-OCR/0356200106/00100.txt", 
+            "pg_ground_truth_file": "/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/10.txt", 
+            "pg_image_path": null, 
+            "pg_ref_number": 10, 
+            "work": {
+                "id": 152141, 
+                "wks_author": "Homer", 
+                "wks_book_id": null, 
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+                "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+                "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+                "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+                "wks_ecco_number": "0356200106", 
+                "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+                "wks_eebo_citation_id": null, 
+                "wks_eebo_directory": null, 
+                "wks_eebo_image_id": null, 
+                "wks_eebo_url": null, 
+                "wks_estc_number": "T059731", 
+                "wks_last_trawled": "1976-04-13", 
+                "wks_marc_record": null, 
+                "wks_organizational_unit": 152, 
+                "wks_primary_print_font": 9, 
+                "wks_pub_date": "1715", 
+                "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+                "wks_tcp_bibno": null, 
+                "wks_tcp_number": "K052227.006", 
+                "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+                "wks_word_count": null
+            }
+        }, 
+        "proc_id": "20150115110048468", 
+        "results": null, 
+        "status": {
+            "id": 2, 
+            "name": "Processing"
+        }, 
+        "tries": 0, 
+        "work": {
+            "id": 152141, 
+            "wks_author": "Homer", 
+            "wks_book_id": null, 
+            "wks_ecco_corrected_text_path": "/data/shared/text-xml/ECCO-TCP-document-text/K052227.006.txt", 
+            "wks_ecco_corrected_xml_path": "/data/shared/text-xml/ECCO-TCP-document-xml/K052227.006.xml", 
+            "wks_ecco_directory": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images", 
+            "wks_ecco_gale_ocr_xml_path": "/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/xml/0356200106.xml", 
+            "wks_ecco_number": "0356200106", 
+            "wks_ecco_uncorrected_gale_ocr_path": "/data/shared/text-xml/ECCO-Gale-document-OCR/0356200106.txt", 
+            "wks_eebo_citation_id": null, 
+            "wks_eebo_directory": null, 
+            "wks_eebo_image_id": null, 
+            "wks_eebo_url": null, 
+            "wks_estc_number": "T059731", 
+            "wks_last_trawled": "1976-04-13", 
+            "wks_marc_record": null, 
+            "wks_organizational_unit": 152, 
+            "wks_primary_print_font": 9, 
+            "wks_pub_date": "1715", 
+            "wks_publisher": "London : printed by W. Bowyer, for Bernard Lintott, 1715-20.", 
+            "wks_tcp_bibno": null, 
+            "wks_tcp_number": "K052227.006", 
+            "wks_title": "The Iliad of Homer. Translated by Mr. Pope.", 
+            "wks_word_count": null
+        }
+    }
+]
+[2015-01-22T18:43:20] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:43:20] INFO: Got job [63310] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:43:20] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600010.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:43:37] INFO: OCR [63310] COMPLETE: Duration: 17.096 secs
+[2015-01-22T18:43:37] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 1.xml'
+[2015-01-22T18:43:51] INFO: Denoise [63310] COMPLETE: Duration: 13.650 secs
+[2015-01-22T18:43:51] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1_IDHMC.xml'
+[2015-01-22T18:44:03] INFO: MultiColumnSkew [63310] COMPLETE: Duration: 12.193 secs
+[2015-01-22T18:44:03] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1_IDHMC.txt
+[2015-01-22T18:44:03] INFO: XML_To_Text [63310] COMPLETE: Duration: 0.103 secs
+[2015-01-22T18:44:03] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1.xml'
+[2015-01-22T18:44:04] INFO: PageEvaluator [63310] COMPLETE: Duration: 1.346 secs
+[2015-01-22T18:44:04] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1.xml'
+[2015-01-22T18:44:56] INFO: PageCorrector [63310] COMPLETE: Duration: 51.404 secs
+[2015-01-22T18:44:56] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/1.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/1_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:44:57] INFO: JuxtaCompare [63310] COMPLETE: Duration: 1.266 secs
+[2015-01-22T18:44:57] INFO: Job [63310] COMPLETE: Duration: 97.068 secs
+[2015-01-22T18:44:57] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:44:57] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:44:57] INFO: Got job [63311] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:44:57] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600020.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:44:59] INFO: OCR [63311] COMPLETE: Duration: 2.213 secs
+[2015-01-22T18:44:59] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 2.xml'
+[2015-01-22T18:45:04] INFO: Denoise [63311] COMPLETE: Duration: 4.471 secs
+[2015-01-22T18:45:04] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2_IDHMC.xml'
+[2015-01-22T18:45:08] INFO: MultiColumnSkew [63311] COMPLETE: Duration: 4.281 secs
+[2015-01-22T18:45:08] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2_IDHMC.txt
+[2015-01-22T18:45:08] INFO: XML_To_Text [63311] COMPLETE: Duration: 0.009 secs
+[2015-01-22T18:45:08] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2.xml'
+[2015-01-22T18:45:09] INFO: PageEvaluator [63311] COMPLETE: Duration: 0.851 secs
+[2015-01-22T18:45:09] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2.xml'
+[2015-01-22T18:45:39] INFO: PageCorrector [63311] COMPLETE: Duration: 30.484 secs
+[2015-01-22T18:45:39] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/2.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/2_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:45:40] INFO: JuxtaCompare [63311] COMPLETE: Duration: 0.976 secs
+[2015-01-22T18:45:40] INFO: Job [63311] COMPLETE: Duration: 43.294 secs
+[2015-01-22T18:45:40] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:45:40] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:45:40] INFO: Got job [63312] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:45:40] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600030.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:45:42] INFO: OCR [63312] COMPLETE: Duration: 1.284 secs
+[2015-01-22T18:45:42] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 3.xml'
+[2015-01-22T18:45:46] INFO: Denoise [63312] COMPLETE: Duration: 3.912 secs
+[2015-01-22T18:45:46] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3_IDHMC.xml'
+[2015-01-22T18:45:49] INFO: MultiColumnSkew [63312] COMPLETE: Duration: 3.799 secs
+[2015-01-22T18:45:49] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3_IDHMC.txt
+[2015-01-22T18:45:49] INFO: XML_To_Text [63312] COMPLETE: Duration: 0.004 secs
+[2015-01-22T18:45:49] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3.xml'
+[2015-01-22T18:45:50] INFO: PageEvaluator [63312] COMPLETE: Duration: 0.609 secs
+[2015-01-22T18:45:50] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3.xml'
+[2015-01-22T18:46:20] INFO: PageCorrector [63312] COMPLETE: Duration: 30.274 secs
+[2015-01-22T18:46:20] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/3.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/3_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:46:21] INFO: JuxtaCompare [63312] COMPLETE: Duration: 0.932 secs
+[2015-01-22T18:46:21] INFO: Job [63312] COMPLETE: Duration: 40.822 secs
+[2015-01-22T18:46:21] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:46:21] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:46:21] INFO: Got job [63313] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:46:21] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600040.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:46:31] INFO: OCR [63313] COMPLETE: Duration: 9.808 secs
+[2015-01-22T18:46:31] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 4.xml'
+[2015-01-22T18:46:38] INFO: Denoise [63313] COMPLETE: Duration: 7.357 secs
+[2015-01-22T18:46:38] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4_IDHMC.xml'
+[2015-01-22T18:46:46] INFO: MultiColumnSkew [63313] COMPLETE: Duration: 7.557 secs
+[2015-01-22T18:46:46] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4_IDHMC.txt
+[2015-01-22T18:46:46] INFO: XML_To_Text [63313] COMPLETE: Duration: 0.016 secs
+[2015-01-22T18:46:46] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4.xml'
+[2015-01-22T18:46:47] INFO: PageEvaluator [63313] COMPLETE: Duration: 1.049 secs
+[2015-01-22T18:46:47] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4.xml'
+[2015-01-22T18:47:21] INFO: PageCorrector [63313] COMPLETE: Duration: 33.966 secs
+[2015-01-22T18:47:21] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/4.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/4_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:47:22] INFO: JuxtaCompare [63313] COMPLETE: Duration: 1.011 secs
+[2015-01-22T18:47:22] INFO: Job [63313] COMPLETE: Duration: 60.773 secs
+[2015-01-22T18:47:22] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:47:22] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:47:22] INFO: Got job [63314] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:47:22] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600050.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:47:26] INFO: OCR [63314] COMPLETE: Duration: 4.490 secs
+[2015-01-22T18:47:26] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 5.xml'
+[2015-01-22T18:47:32] INFO: Denoise [63314] COMPLETE: Duration: 5.073 secs
+[2015-01-22T18:47:32] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5_IDHMC.xml'
+[2015-01-22T18:47:37] INFO: MultiColumnSkew [63314] COMPLETE: Duration: 5.619 secs
+[2015-01-22T18:47:37] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5_IDHMC.txt
+[2015-01-22T18:47:37] INFO: XML_To_Text [63314] COMPLETE: Duration: 0.008 secs
+[2015-01-22T18:47:37] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5.xml'
+[2015-01-22T18:47:38] INFO: PageEvaluator [63314] COMPLETE: Duration: 0.845 secs
+[2015-01-22T18:47:38] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5.xml'
+[2015-01-22T18:48:09] INFO: PageCorrector [63314] COMPLETE: Duration: 31.096 secs
+[2015-01-22T18:48:09] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/5.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/5_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:48:10] INFO: JuxtaCompare [63314] COMPLETE: Duration: 0.971 secs
+[2015-01-22T18:48:10] INFO: Job [63314] COMPLETE: Duration: 48.112 secs
+[2015-01-22T18:48:10] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:48:10] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:48:10] INFO: Got job [63315] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:48:10] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600060.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:48:17] INFO: OCR [63315] COMPLETE: Duration: 6.669 secs
+[2015-01-22T18:48:17] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 6.xml'
+[2015-01-22T18:48:23] INFO: Denoise [63315] COMPLETE: Duration: 6.407 secs
+[2015-01-22T18:48:23] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6_IDHMC.xml'
+[2015-01-22T18:48:30] INFO: MultiColumnSkew [63315] COMPLETE: Duration: 7.148 secs
+[2015-01-22T18:48:30] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6_IDHMC.txt
+[2015-01-22T18:48:30] INFO: XML_To_Text [63315] COMPLETE: Duration: 0.012 secs
+[2015-01-22T18:48:30] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6.xml'
+[2015-01-22T18:48:31] INFO: PageEvaluator [63315] COMPLETE: Duration: 1.000 secs
+[2015-01-22T18:48:31] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6.xml'
+[2015-01-22T18:49:10] INFO: PageCorrector [63315] COMPLETE: Duration: 38.257 secs
+[2015-01-22T18:49:10] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/6.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/6_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:49:11] INFO: JuxtaCompare [63315] COMPLETE: Duration: 0.991 secs
+[2015-01-22T18:49:11] INFO: Job [63315] COMPLETE: Duration: 60.493 secs
+[2015-01-22T18:49:11] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:49:11] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:49:11] INFO: Got job [63316] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:49:11] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600070.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:49:19] INFO: OCR [63316] COMPLETE: Duration: 8.082 secs
+[2015-01-22T18:49:19] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 7.xml'
+[2015-01-22T18:49:28] INFO: Denoise [63316] COMPLETE: Duration: 8.918 secs
+[2015-01-22T18:49:28] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7_IDHMC.xml'
+[2015-01-22T18:49:35] INFO: MultiColumnSkew [63316] COMPLETE: Duration: 7.271 secs
+[2015-01-22T18:49:35] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7_IDHMC.txt
+[2015-01-22T18:49:35] INFO: XML_To_Text [63316] COMPLETE: Duration: 0.017 secs
+[2015-01-22T18:49:35] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7.xml'
+[2015-01-22T18:49:36] INFO: PageEvaluator [63316] COMPLETE: Duration: 1.053 secs
+[2015-01-22T18:49:36] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7.xml'
+[2015-01-22T18:50:08] INFO: PageCorrector [63316] COMPLETE: Duration: 32.342 secs
+[2015-01-22T18:50:08] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/7.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/7_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:50:09] INFO: JuxtaCompare [63316] COMPLETE: Duration: 0.987 secs
+[2015-01-22T18:50:09] INFO: Job [63316] COMPLETE: Duration: 58.679 secs
+[2015-01-22T18:50:09] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:50:09] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:50:09] INFO: Got job [63317] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:50:09] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600080.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:50:15] INFO: OCR [63317] COMPLETE: Duration: 6.230 secs
+[2015-01-22T18:50:15] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 8.xml'
+[2015-01-22T18:50:22] INFO: Denoise [63317] COMPLETE: Duration: 6.257 secs
+[2015-01-22T18:50:22] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8_IDHMC.xml'
+[2015-01-22T18:50:29] INFO: MultiColumnSkew [63317] COMPLETE: Duration: 6.944 secs
+[2015-01-22T18:50:29] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8_IDHMC.txt
+[2015-01-22T18:50:29] INFO: XML_To_Text [63317] COMPLETE: Duration: 0.011 secs
+[2015-01-22T18:50:29] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8.xml'
+[2015-01-22T18:50:30] INFO: PageEvaluator [63317] COMPLETE: Duration: 1.010 secs
+[2015-01-22T18:50:30] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8.xml'
+[2015-01-22T18:51:27] INFO: PageCorrector [63317] COMPLETE: Duration: 57.194 secs
+[2015-01-22T18:51:27] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/8.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/8_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:51:28] INFO: JuxtaCompare [63317] COMPLETE: Duration: 0.990 secs
+[2015-01-22T18:51:28] INFO: Job [63317] COMPLETE: Duration: 78.646 secs
+[2015-01-22T18:51:28] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:51:28] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:51:28] INFO: Got job [63318] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:51:28] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600090.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:51:34] INFO: OCR [63318] COMPLETE: Duration: 5.950 secs
+[2015-01-22T18:51:34] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 9.xml'
+[2015-01-22T18:51:41] INFO: Denoise [63318] COMPLETE: Duration: 6.750 secs
+[2015-01-22T18:51:41] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9_IDHMC.xml'
+[2015-01-22T18:51:48] INFO: MultiColumnSkew [63318] COMPLETE: Duration: 7.241 secs
+[2015-01-22T18:51:48] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9_IDHMC.txt
+[2015-01-22T18:51:48] INFO: XML_To_Text [63318] COMPLETE: Duration: 0.012 secs
+[2015-01-22T18:51:48] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9.xml'
+[2015-01-22T18:51:49] INFO: PageEvaluator [63318] COMPLETE: Duration: 1.062 secs
+[2015-01-22T18:51:49] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9.xml'
+[2015-01-22T18:52:42] INFO: PageCorrector [63318] COMPLETE: Duration: 52.734 secs
+[2015-01-22T18:52:42] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/9.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/9_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:52:43] INFO: JuxtaCompare [63318] COMPLETE: Duration: 1.000 secs
+[2015-01-22T18:52:43] INFO: Job [63318] COMPLETE: Duration: 74.757 secs
+[2015-01-22T18:52:43] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:52:43] DEBUG: Using temp directory /tmp/SLURM_871616_1380
+[2015-01-22T18:52:43] INFO: Got job [63319] - Batch: for Anshul & Trey - Sc8b - ECCO TTS JobType: ocr OCR Engine: tesseract
+[2015-01-22T18:52:43] INFO: Executing: 'tesseract /dh/data/ecco/ECCO_2of2/LitAndLang_2/0356200106/images/035620010600100.TIF /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10 -l SC8b-R7-D2b /home/treydock/git/emop-controller/tess_cfg.txt'
+[2015-01-22T18:52:50] INFO: OCR [63319] COMPLETE: Duration: 7.600 secs
+[2015-01-22T18:52:50] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/denoise/deNoise_Post.py -p /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/ -n 10.xml'
+[2015-01-22T18:52:57] INFO: Denoise [63319] COMPLETE: Duration: 6.784 secs
+[2015-01-22T18:52:57] INFO: Executing: 'python /home/treydock/git/emop-controller/lib/MultiColumnSkew/multiColDetect.py /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10_IDHMC.xml'
+[2015-01-22T18:53:04] INFO: MultiColumnSkew [63319] COMPLETE: Duration: 7.278 secs
+[2015-01-22T18:53:04] INFO: XML_To_Text: Converting /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10_IDHMC.xml to /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10_IDHMC.txt
+[2015-01-22T18:53:04] INFO: XML_To_Text [63319] COMPLETE: Duration: 0.013 secs
+[2015-01-22T18:53:04] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/seasr/PageEvaluator.jar -q /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10.xml'
+[2015-01-22T18:53:05] INFO: PageEvaluator [63319] COMPLETE: Duration: 1.027 secs
+[2015-01-22T18:53:05] INFO: Executing: 'java -Xms128M -Xmx1024M -jar /home/treydock/git/emop-controller/lib/seasr/PageCorrector.jar --dbconf /tmp/SLURM_871616_1380/emop.properties -t /home/treydock/git/emop-controller/lib/seasr/rules/transformations.json -o /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141 --stats --alt 2 --max-transforms 20 --noiseCutoff 0.5 --dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Roman_Numerals.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Personal_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Place_Names.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Variants.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Numbers.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/la.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Syncope.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/Ted_Main_Dictionary.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/fr.dict /home/treydock/git/emop-controller/lib/seasr/dictionaries/en.dict -- /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10.xml'
+[2015-01-22T18:53:50] INFO: PageCorrector [63319] COMPLETE: Duration: 44.594 secs
+[2015-01-22T18:53:50] INFO: Executing: 'java -Xms128M -Xmx128M -jar /home/treydock/git/emop-controller/lib/juxta-cl/juxta-cl.jar -diff /dh/data/shared/text-xml/ECCO-TCP-pages-text/ECCO_2of2/LitAndLang_2/0356200106/10.txt /home/treydock/git/emop-controller/tests/system/output/IDHMC-ocr/17/152141/10_ALTO.txt -algorithm jaro_winkler -hyphen none'
+[2015-01-22T18:53:51] INFO: JuxtaCompare [63319] COMPLETE: Duration: 0.994 secs
+[2015-01-22T18:53:51] INFO: Job [63319] COMPLETE: Duration: 68.299 secs
+[2015-01-22T18:53:51] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:53:51] DEBUG: Payload: 
+{
+    "job_queues": {
+        "completed": [
+            63310, 
+            63311, 
+            63312, 
+            63313, 
+            63314, 
+            63315, 
+            63316, 
+            63317, 
+            63318, 
+            63319
+        ], 
+        "failed": []
+    }, 
+    "page_results": [
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/1_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/1_ALTO.xml", 
+            "juxta_change_index": 0.90112233, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/1.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/1.xml", 
+            "page_id": 2179368
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/2_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/2_ALTO.xml", 
+            "juxta_change_index": 0.58846515, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/2.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/2.xml", 
+            "page_id": 2179369
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/3_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/3_ALTO.xml", 
+            "juxta_change_index": 0.19740741, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/3.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/3.xml", 
+            "page_id": 2179370
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/4_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/4_ALTO.xml", 
+            "juxta_change_index": 0.89653045, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/4.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/4.xml", 
+            "page_id": 2179371
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/5_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/5_ALTO.xml", 
+            "juxta_change_index": 0.8737282, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/5.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/5.xml", 
+            "page_id": 2179372
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/6_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/6_ALTO.xml", 
+            "juxta_change_index": 0.8667377, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/6.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/6.xml", 
+            "page_id": 2179373
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/7_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/7_ALTO.xml", 
+            "juxta_change_index": 0.9133342, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/7.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/7.xml", 
+            "page_id": 2179374
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/8_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/8_ALTO.xml", 
+            "juxta_change_index": 0.892922, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/8.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/8.xml", 
+            "page_id": 2179375
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/9_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/9_ALTO.xml", 
+            "juxta_change_index": 0.9222184, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/9.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/9.xml", 
+            "page_id": 2179376
+        }, 
+        {
+            "batch_id": 17, 
+            "corr_ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/10_ALTO.txt", 
+            "corr_ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/10_ALTO.xml", 
+            "juxta_change_index": 0.91318756, 
+            "ocr_text_path": "/tests/system/output/IDHMC-ocr/17/152141/10.txt", 
+            "ocr_xml_path": "/tests/system/output/IDHMC-ocr/17/152141/10.xml", 
+            "page_id": 2179377
+        }
+    ], 
+    "postproc_results": [
+        {
+            "batch_job_id": 17, 
+            "multicol": "-2080.00,-2080.00,-2080.00", 
+            "page_id": 2179368, 
+            "pp_ecorr": "0.984568", 
+            "pp_health": "{\"total\":407,\"ignored\":13,\"correct\":324,\"corrected\":41,\"unchanged\":29}", 
+            "pp_noisemsr": "0.0097", 
+            "pp_pg_quality": "0.779951", 
+            "skew_idx": "0.200000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-1984.00,-1984.00,-1984.00", 
+            "page_id": 2179369, 
+            "pp_ecorr": "0.954545", 
+            "pp_health": "{\"total\":36,\"ignored\":10,\"correct\":10,\"corrected\":3,\"unchanged\":13}", 
+            "pp_noisemsr": "0.3390", 
+            "pp_pg_quality": "0.500000", 
+            "skew_idx": "0.400000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-1920.00,-1920.00,-1920.00", 
+            "page_id": 2179370, 
+            "pp_ecorr": "0.500000", 
+            "pp_health": "{\"total\":14,\"ignored\":6,\"correct\":1,\"corrected\":3,\"unchanged\":4}", 
+            "pp_noisemsr": "0.5000", 
+            "pp_pg_quality": "0.192308", 
+            "skew_idx": "0.400000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-1888.00,-1888.00,-1888.00", 
+            "page_id": 2179371, 
+            "pp_ecorr": "0.993197", 
+            "pp_health": "{\"total\":182,\"ignored\":3,\"correct\":149,\"corrected\":16,\"unchanged\":14}", 
+            "pp_noisemsr": "0.0314", 
+            "pp_pg_quality": "0.784946", 
+            "skew_idx": "0.000000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-2048.00,-2048.00,-2048.00", 
+            "page_id": 2179372, 
+            "pp_ecorr": "0.975000", 
+            "pp_health": "{\"total\":99,\"ignored\":6,\"correct\":78,\"corrected\":6,\"unchanged\":9}", 
+            "pp_noisemsr": "0.0917", 
+            "pp_pg_quality": "0.728972", 
+            "skew_idx": "0.200000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-2016.00,-2016.00,-2016.00", 
+            "page_id": 2179373, 
+            "pp_ecorr": "0.979452", 
+            "pp_health": "{\"total\":175,\"ignored\":7,\"correct\":129,\"corrected\":17,\"unchanged\":22}", 
+            "pp_noisemsr": "0.0275", 
+            "pp_pg_quality": "0.794444", 
+            "skew_idx": "0.000000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-1952.00,-1952.00,-1952.00", 
+            "page_id": 2179374, 
+            "pp_ecorr": "0.986755", 
+            "pp_health": "{\"total\":178,\"ignored\":7,\"correct\":146,\"corrected\":18,\"unchanged\":7}", 
+            "pp_noisemsr": "0.0324", 
+            "pp_pg_quality": "0.809783", 
+            "skew_idx": "0.200000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-2048.00,-2048.00,-2048.00", 
+            "page_id": 2179375, 
+            "pp_ecorr": "0.985185", 
+            "pp_health": "{\"total\":164,\"ignored\":5,\"correct\":130,\"corrected\":18,\"unchanged\":11}", 
+            "pp_noisemsr": "0.0625", 
+            "pp_pg_quality": "0.764368", 
+            "skew_idx": "0.000000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-1952.00,-1952.00,-1952.00", 
+            "page_id": 2179376, 
+            "pp_ecorr": "0.972973", 
+            "pp_health": "{\"total\":182,\"ignored\":9,\"correct\":149,\"corrected\":14,\"unchanged\":10}", 
+            "pp_noisemsr": "0.0263", 
+            "pp_pg_quality": "0.770053", 
+            "skew_idx": "0.000000,"
+        }, 
+        {
+            "batch_job_id": 17, 
+            "multicol": "-2048.00,-2048.00,-2048.00", 
+            "page_id": 2179377, 
+            "pp_ecorr": "0.973333", 
+            "pp_health": "{\"total\":186,\"ignored\":8,\"correct\":147,\"corrected\":18,\"unchanged\":13}", 
+            "pp_noisemsr": "0.0311", 
+            "pp_pg_quality": "0.764398", 
+            "skew_idx": "0.000000,"
+        }
+    ]
+}
+[2015-01-22T18:53:51] DEBUG: Overwriting payload file at /home/treydock/git/emop-controller/tests/system/payload/output/completed/ecco-small.json
+[2015-01-22T18:53:51] DEBUG: Removing payload file /home/treydock/git/emop-controller/tests/system/payload/output/ecco-small.json
+[2015-01-22T18:53:51] INFO: TOTAL TIME: 631.018
+-=-
+871616 ended on c0513.brazos.tamu.edu at Thu Jan 22 18:53:51 CST 2015
+slurmstepd: _slurm_cgroup_destroy: problem deleting step cgroup path /cgroup/freezer/slurm/uid_1380/job_871616/step_batch: Device or resource busy

@@ -17,7 +17,7 @@ class TestEmopSLURM(TestCase):
         self.settings = default_settings()
         self.settings.avg_page_runtime = 60
         self.settings.max_job_runtime = 3600
-        self.settings.scheduler_logfile = "/dne/log.out"
+        self.settings.scheduler_logdir = "/dne"
 
     def tearDown(self):
         self.popen_patcher.stop()
@@ -25,6 +25,16 @@ class TestEmopSLURM(TestCase):
     def clear_job_id_env(self):
         if os.environ.get("SLURM_JOB_ID"):
             del os.environ["SLURM_JOB_ID"]
+        if os.environ.get("SLURM_JOBID"):
+            del os.environ["SLURM_JOBID"]
+
+    # def test__duration_to_sec_1(self):
+    #     retval = EmopSLURM._duration_to_sec('01:01:01')
+    #     self.assertEqual(3661, retval)
+    #
+    # def test__duration_to_sec_1(self):
+    #     retval = EmopSLURM._duration_to_sec('1-01:01:01')
+    #     self.assertEqual(90061, retval)
 
     def test_current_job_count(self):
         scheduler = EmopSLURM(self.settings)
@@ -46,7 +56,7 @@ class TestEmopSLURM(TestCase):
             "sbatch", "--parsable",
             "-p", "idhmc",
             "-J", "emop-controller",
-            "-o", "/dne/log.out",
+            "-o", "/dne/emop-controller-%j.out",
             "--mem-per-cpu", "4000",
             "--cpus-per-task", "1",
             "emop.slrm"
@@ -75,7 +85,7 @@ class TestEmopSLURM(TestCase):
             "sbatch", "--parsable",
             "-p", "idhmc",
             "-J", "emop-controller",
-            "-o", "/dne/log.out",
+            "-o", "/dne/emop-controller-%j.out",
             "--mem-per-cpu", "4000",
             "--cpus-per-task", "1",
             "emop.slrm"
@@ -90,7 +100,7 @@ class TestEmopSLURM(TestCase):
             "sbatch", "--parsable",
             "-p", "idhmc",
             "-J", "emop-controller",
-            "-o", "/dne/log.out",
+            "-o", "/dne/emop-controller-%j.out",
             "--mem-per-cpu", "4000",
             "--cpus-per-task", "1",
             "--time", "4",
@@ -106,7 +116,7 @@ class TestEmopSLURM(TestCase):
             "sbatch", "--parsable",
             "-p", "idhmc",
             "-J", "emop-controller",
-            "-o", "/dne/log.out",
+            "-o", "/dne/emop-controller-%j.out",
             "--mem-per-cpu", "4000",
             "--cpus-per-task", "1",
             ["--account", "foo"],

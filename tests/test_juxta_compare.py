@@ -31,7 +31,7 @@ class TestJuxtaCompare(TestCase):
 
         expected_cmd = [
             "java", "-Xms128M", "-Xmx128M", "-jar", "/foo/lib/juxta-cl/juxta-cl.jar",
-            "-diff", "/dh/dne/gt.txt", job.alto_txt_file,
+            "-diff", "/fdata/idhmc/emop-input/dne/gt.txt", job.alto_txt_file,
             "-algorithm", "jaro_winkler", "-hyphen", "none"
         ]
         results = mock_results_tuple()

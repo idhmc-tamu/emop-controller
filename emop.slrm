@@ -56,6 +56,10 @@ RUN_CMD="srun python ${EMOP_HOME}/emop.py -c ${EMOP_CONFIG_PATH} run --proc-id $
 echo "Executing: ${RUN_CMD}"
 eval ${RUN_CMD}
 
+TRANSFER_CMD="python ${EMOP_HOME}/emop.py -c ${EMOP_CONFIG_PATH} transfer out --proc-id ${PROC_ID}"
+echo "Executing: ${TRANSFER_CMD}"
+eval ${TRANSFER_CMD}
+
 UPLOAD_CMD="python ${EMOP_HOME}/emop.py -c ${EMOP_CONFIG_PATH} upload --proc-id ${PROC_ID}"
 echo "Executing: ${UPLOAD_CMD}"
 eval ${UPLOAD_CMD}

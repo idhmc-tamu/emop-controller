@@ -13,6 +13,7 @@ config*.ini
 !config-idhmc-test.ini
 payload/**/*.json
 payload/**/**/*.json
+.globus-auth
 
 *.jar
 lib/juxta-cl/*.sh

@@ -37,12 +37,15 @@ def mock_scheduler_slurm():
     scheduler = EmopScheduler.get_scheduler_instance(name="slurm", settings=settings)
     return scheduler
 
-
-def load_fixture_file(name):
+def fixture_file(name):
     test_root = os.path.dirname(__file__)
     fixture_dir = os.path.join(test_root, 'fixtures')
     fixture_file = os.path.join(fixture_dir, name)
-    with open(fixture_file) as datafile:
+    return fixture_file
+
+def load_fixture_file(name):
+    _fixture_file = fixture_file(name)
+    with open(_fixture_file) as datafile:
         data = json.load(datafile)
     return data
 

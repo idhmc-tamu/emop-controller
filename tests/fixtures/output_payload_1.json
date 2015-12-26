@@ -1,0 +1,31 @@
+{
+    "job_queues": {
+        "completed": [
+            63310
+        ],
+        "failed": []
+    },
+    "page_results": [
+        {
+            "batch_id": 17,
+            "corr_ocr_text_path": "/data/shared/text-xml/IDHMC-ocr/17/152141/1_ALTO.txt",
+            "corr_ocr_xml_path": "/data/shared/text-xml/IDHMC-ocr/17/152141/1_ALTO.xml",
+            "juxta_change_index": 0.9010853,
+            "ocr_text_path": "/data/shared/text-xml/IDHMC-ocr/17/152141/1.txt",
+            "ocr_xml_path": "/data/shared/text-xml/IDHMC-ocr/17/152141/1.xml",
+            "page_id": 2179368
+        }
+    ],
+    "postproc_results": [
+        {
+            "batch_job_id": 17,
+            "multicol": "-2080.00,-2080.00,-2080.00",
+            "page_id": 2179368,
+            "pp_ecorr": "0.984568",
+            "pp_health": "{\"total\":407,\"ignored\":13,\"correct\":324,\"corrected\":42,\"unchanged\":28}",
+            "pp_noisemsr": "0.0097",
+            "pp_pg_quality": "0.779951",
+            "skew_idx": "0.200000,"
+        }
+    ]
+}

@@ -19,23 +19,31 @@ auth_token = changeme
 payload_input_path = %(emop_home)s/payload/input
 payload_output_path = %(emop_home)s/payload/output
 ocr_root = /data/shared/text-xml/IDHMC-ocr
-input_path_prefix = /dh
-output_path_prefix = /dh
+input_path_prefix = /fdata/idhmc/emop-input
+output_path_prefix = /fdata/idhmc/emop-output
 log_level = INFO
 scheduler = slurm
 skip_existing = True
 
+[globus]
+cluster_endpoint = 'tamu#brazos'
+remote_endpoint = 'idhmc#data'
+#username = 'CHANGEME'
+# Default min_activation_time is scheduler/max_job_runtime plus 1 day
+#min_activation_time = 60*60*24*4
+
 [scheduler]
 max_jobs = 128
 queue = idhmc
+transfer_queue = idhmc
 # Example values for submitting to background
 #max_jobs = 3000
 #queue = background
 name = emop-controller
-min_job_runtime = 300
-max_job_runtime = 259200
+min_job_runtime = 60*5
+max_job_runtime = 60*60*24*3
 # Example values for submitting to background
-#max_job_runtime = 345600
+#max_job_runtime = 60*60*24*4
 avg_page_runtime = 20
 logdir = %(emop_home)s/logs
 mem_per_cpu = 4000

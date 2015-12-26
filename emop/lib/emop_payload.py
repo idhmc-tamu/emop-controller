@@ -21,6 +21,7 @@ class EmopPayload(object):
         self.uploaded_output_filename = os.path.join(self.uploaded_output_path, "%s.json" % self.proc_id)
 
     def file_exists(self, filename):
+        logger.debug("Checking for payload at %s", filename)
         if os.path.isfile(filename):
             return True
         else:
@@ -34,6 +35,9 @@ class EmopPayload(object):
 
     def completed_output_exists(self):
         return self.file_exists(self.completed_output_filename)
+
+    def uploaded_output_exists(self):
+        return self.file_exists(self.uploaded_output_filename)
 
     def save(self, data, dirname, filename, overwrite=False):
         if not os.path.isdir(dirname):
@@ -59,7 +63,11 @@ class EmopPayload(object):
 
         logger.debug("Loading payload from %s" % filename)
         with open(filename) as datafile:
-            data = json.load(datafile)
+            try:
+                data = json.load(datafile)
+            except ValueError:
+                logger.error("EmopPayload: Invalid JSON file %s" % filename)
+                return None
 
         return data
 

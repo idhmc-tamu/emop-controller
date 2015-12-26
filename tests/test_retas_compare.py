@@ -31,7 +31,7 @@ class TestRetasCompare(TestCase):
 
         expected_cmd = [
             "java", "-Xms128M", "-Xmx128M", "-jar", "/foo/lib/retas/retas.jar",
-            "/dh/dne/gt.txt", job.alto_txt_file,
+            "/fdata/idhmc/emop-input/dne/gt.txt", job.alto_txt_file,
             "-opt", "/foo/lib/retas/config.txt"
         ]
         results = mock_results_tuple()

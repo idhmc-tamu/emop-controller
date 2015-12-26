@@ -1,0 +1,55 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --export=EMOP_HOME,EMOP_CONFIG_PATH,TASK_ID
+
+# load required modules
+module use ${EMOP_HOME}/modulefiles
+module load emop
+
+export OPENBLAS_NUM_THREADS=$SLURM_JOB_CPUS_PER_NODE
+export OMP_NUM_THREADS=$SLURM_JOB_CPUS_PER_NODE
+
+if [ -z $EMOP_CONFIG_PATH ]; then
+    EMOP_CONFIG_PATH=${EMOP_HOME}/config.ini
+fi
+
+# Print out the starting time and host.
+echo "${SLURM_JOB_ID} started on $(hostname) at $(date)"
+echo "-=-"
+
+# Set umask so directories can be read/written by others
+umask 002
+
+# Determine how long the job has to run
+# timeLimit_str="$(scontrol --oneliner show job=${SLURM_JOB_ID} | sed -r -n 's|.*TimeLimit=([0-9:\-]+).*|\1|p')"
+# #timeLimit_str="01:01:01"
+# #timeLimit_str="1-01:01:01"
+# # Set the --wait value to 5 minutes less than job time limit
+# timeA=(${timeLimit_str//-/ })
+# if [ ${#timeA[@]} -eq 1 ]; then
+#     timeLimitD=0
+#     timeLimitHMS=${timeA[0]}
+# fi
+# if [ ${#timeA[@]} -eq 2 ]; then
+#     timeLimitD=$((${timeA[0]}*60*60*24))
+#     timeLimitHMS=${timeA[1]}
+# fi
+#
+# timeLimitHMS=$(echo $timeLimitHMS | awk -F: '{ print ($1 * 3600) + ($2 * 60) + $3 }')
+# timeLimit=$((timeLimitD+timeLimitHMS))
+# waitTime=$((timeLimit-60*5))
+# Set wait time to 3 days minus 5 minutes
+waitTime=$((60*60*24*3-60*5))
+
+# launch instance of the controller which runs until killed or no jobs remain
+#TRANSFER_CMD="srun --unbuffered stdbuf -o0 python ${EMOP_HOME}/emop.py -c ${EMOP_CONFIG_PATH} transfer status --task-id ${TASK_ID} --wait"
+TRANSFER_CMD="srun python ${EMOP_HOME}/emop.py -c ${EMOP_CONFIG_PATH} transfer status --task-id ${TASK_ID} --wait=${waitTime}"
+echo "Executing: ${TRANSFER_CMD}"
+eval ${TRANSFER_CMD}
+
+# Done; print the end time and host.
+echo "-=-"
+echo "${SLURM_JOB_ID} ended on $(hostname) at $(date)"
+ 
+exit 0

@@ -1,4 +1,5 @@
 import ConfigParser
+import getpass
 import json
 import os
 
@@ -7,6 +8,10 @@ defaults = {
     "controller": {
         "scheduler": "slurm",
         "skip_existing": True
+    },
+    "globus": {
+        "username": None,
+        "min_activation_time": None,
     },
     "scheduler": {
         "mem_per_cpu": "4000",
@@ -37,7 +42,7 @@ defaults = {
 class EmopSettings(object):
 
     def __init__(self, config_path):
-        self.config_path = config_path
+        self.config_path = os.path.abspath(config_path)
         self.config = ConfigParser.ConfigParser()
         self.config.read(self.config_path)
 
@@ -88,17 +93,26 @@ class EmopSettings(object):
         # Settings used to interact with the cluster scheduler
         self.max_jobs = int(self.get_value('scheduler', 'max_jobs'))
         self.scheduler_queue = self.get_value('scheduler', 'queue')
+        self.scheduler_transfer_queue = self.get_value('scheduler', 'transfer_queue', default=self.scheduler_queue)
         self.scheduler_job_name = self.get_value('scheduler', 'name')
-        self.min_job_runtime = int(self.get_value('scheduler', 'min_job_runtime'))
-        self.max_job_runtime = int(self.get_value('scheduler', 'max_job_runtime'))
-        self.avg_page_runtime = int(self.get_value('scheduler', 'avg_page_runtime'))
+        self.min_job_runtime = int(eval(self.get_value('scheduler', 'min_job_runtime')))
+        self.max_job_runtime = int(eval(self.get_value('scheduler', 'max_job_runtime')))
+        self.avg_page_runtime = int(eval(self.get_value('scheduler', 'avg_page_runtime')))
         self.scheduler_logdir = self.get_value('scheduler', 'logdir')
-        self.scheduler_logfile = os.path.join(self.scheduler_logdir, "%s-%%j.out" % self.scheduler_job_name)
         self.scheduler_mem_per_cpu = self.get_value('scheduler', 'mem_per_cpu')
         self.scheduler_cpus_per_task = self.get_value('scheduler', 'cpus_per_task')
         self.scheduler_set_walltime = self.get_bool_value('scheduler', 'set_walltime')
         # Allow to fail if invalid type provided
         self.scheduler_extra_args = json.loads(self.get_value('scheduler', 'extra_args'))
+
+        # Settings related to Globus
+        self.globus_auth_file = os.path.join(self.emop_home, '.globus-auth')
+        self.globus_cluster_endpoint = self.get_value("globus", "cluster_endpoint")
+        self.globus_remote_endpoint = self.get_value("globus", "remote_endpoint")
+        self.globus_username = self.get_value("globus", "username")
+        # Default min activation time is max job runtime plus 1 day
+        _default_globus_min_activation_time = self.max_job_runtime + 60*60*24
+        self.globus_min_activation_time = self.get_value("globus", "min_activation_time", default=_default_globus_min_activation_time)
 
         # Settings used by MultiColumnSkew
         self.multi_column_skew_enabled = self.get_bool_value('multi-column-skew', 'enabled')
@@ -148,8 +162,11 @@ class EmopSettings(object):
                     raw_value = defaults[section][option]
                 else:
                     raise e
-
-        return raw_value
+        if isinstance(raw_value, basestring):
+            value = raw_value.strip("'")
+        else:
+            value = raw_value
+        return value
 
     def get_bool_value(self, section, option, default=None):
         """Get settings bool value

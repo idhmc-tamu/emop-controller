@@ -4,6 +4,11 @@ from emop.lib.models.emop_model import EmopModel
 
 class EmopPage(EmopModel):
 
+    transfer_attributes = [
+        'pg_image_path',
+        'pg_ground_truth_file',
+    ]
+
     def __init__(self, settings):
         super(self.__class__, self).__init__(settings)
         self._ground_truth_file = None

@@ -1,0 +1,201 @@
+{
+    "page": 1,
+    "per_page": 2,
+    "results": [
+        {
+            "batch_job": {
+                "font": {
+                    "font_bold": null,
+                    "font_fixed": null,
+                    "font_fraktur": null,
+                    "font_italic": null,
+                    "font_library_path": null,
+                    "font_line_height": null,
+                    "font_name": "SC8b-R8-D2b",
+                    "font_serif": null,
+                    "id": 209
+                },
+                "id": 6,
+                "job_type": {
+                    "id": 2,
+                    "name": "OCR"
+                },
+                "name": "TEST-Globus-1",
+                "notes": "Testing Globus",
+                "ocr_engine": {
+                    "id": 2,
+                    "name": "Tesseract"
+                },
+                "parameters": ""
+            },
+            "id": 40863437,
+            "page": {
+                "id": 42707788,
+                "pg_gale_ocr_file": null,
+                "pg_ground_truth_file": "/data/shared/text-xml/EEBO-TCP-pages-text/e0006/40099/1.txt",
+                "pg_image_path": "/data/eebo/e0006/40099/00001.000.001.tif",
+                "pg_ref_number": 1,
+                "work": {
+                    "id": 5,
+                    "wks_author": "A. B.",
+                    "wks_bib_name": null,
+                    "wks_book_id": null,
+                    "wks_ecco_corrected_text_path": "/data/shared/text-xml/EEBO-TCP-document-text/e0006/40099.txt",
+                    "wks_ecco_corrected_xml_path": null,
+                    "wks_ecco_directory": null,
+                    "wks_ecco_gale_ocr_xml_path": "",
+                    "wks_ecco_number": null,
+                    "wks_ecco_uncorrected_gale_ocr_path": null,
+                    "wks_eebo_citation_id": 7708772,
+                    "wks_eebo_directory": "/data/eebo/e0006/40099",
+                    "wks_eebo_image_id": "40099",
+                    "wks_eebo_url": "http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&res_id=xri:eebo&rft_id=xri:eebo:image:40099",
+                    "wks_estc_number": "B5",
+                    "wks_last_trawled": "1976-04-13",
+                    "wks_marc_record": "A29730",
+                    "wks_organizational_unit": 0,
+                    "wks_primary_print_font": 24,
+                    "wks_pub_date": "1681",
+                    "wks_publisher": "Dublin : Printed by Benjamin Took and John Crook, and are to be sold by Mary Crook & Andrew Crook ..., 1681.",
+                    "wks_tcp_bibno": 7708772,
+                    "wks_tcp_number": "A29730",
+                    "wks_title": "A dissuasive from popery sent in a letter from A.B. to C.D.",
+                    "wks_word_count": null
+                }
+            },
+            "proc_id": null,
+            "results": null,
+            "status": {
+                "id": 1,
+                "name": "Not Started"
+            },
+            "tries": 0,
+            "work": {
+                "id": 5,
+                "wks_author": "A. B.",
+                "wks_bib_name": null,
+                "wks_book_id": null,
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/EEBO-TCP-document-text/e0006/40099.txt",
+                "wks_ecco_corrected_xml_path": null,
+                "wks_ecco_directory": null,
+                "wks_ecco_gale_ocr_xml_path": "",
+                "wks_ecco_number": null,
+                "wks_ecco_uncorrected_gale_ocr_path": null,
+                "wks_eebo_citation_id": 7708772,
+                "wks_eebo_directory": "/data/eebo/e0006/40099",
+                "wks_eebo_image_id": "40099",
+                "wks_eebo_url": "http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&res_id=xri:eebo&rft_id=xri:eebo:image:40099",
+                "wks_estc_number": "B5",
+                "wks_last_trawled": "1976-04-13",
+                "wks_marc_record": "A29730",
+                "wks_organizational_unit": 0,
+                "wks_primary_print_font": 24,
+                "wks_pub_date": "1681",
+                "wks_publisher": "Dublin : Printed by Benjamin Took and John Crook, and are to be sold by Mary Crook & Andrew Crook ..., 1681.",
+                "wks_tcp_bibno": 7708772,
+                "wks_tcp_number": "A29730",
+                "wks_title": "A dissuasive from popery sent in a letter from A.B. to C.D.",
+                "wks_word_count": null
+            }
+        },
+        {
+            "batch_job": {
+                "font": {
+                    "font_bold": null,
+                    "font_fixed": null,
+                    "font_fraktur": null,
+                    "font_italic": null,
+                    "font_library_path": null,
+                    "font_line_height": null,
+                    "font_name": "SC8b-R8-D2b",
+                    "font_serif": null,
+                    "id": 209
+                },
+                "id": 6,
+                "job_type": {
+                    "id": 2,
+                    "name": "OCR"
+                },
+                "name": "TEST-Globus-1",
+                "notes": "Testing Globus",
+                "ocr_engine": {
+                    "id": 2,
+                    "name": "Tesseract"
+                },
+                "parameters": ""
+            },
+            "id": 40863438,
+            "page": {
+                "id": 42707789,
+                "pg_gale_ocr_file": null,
+                "pg_ground_truth_file": "/data/shared/text-xml/EEBO-TCP-pages-text/e0006/40099/2.txt",
+                "pg_image_path": "/data/eebo/e0006/40099/00002.000.001.tif",
+                "pg_ref_number": 2,
+                "work": {
+                    "id": 5,
+                    "wks_author": "A. B.",
+                    "wks_bib_name": null,
+                    "wks_book_id": null,
+                    "wks_ecco_corrected_text_path": "/data/shared/text-xml/EEBO-TCP-document-text/e0006/40099.txt",
+                    "wks_ecco_corrected_xml_path": null,
+                    "wks_ecco_directory": null,
+                    "wks_ecco_gale_ocr_xml_path": "",
+                    "wks_ecco_number": null,
+                    "wks_ecco_uncorrected_gale_ocr_path": null,
+                    "wks_eebo_citation_id": 7708772,
+                    "wks_eebo_directory": "/data/eebo/e0006/40099",
+                    "wks_eebo_image_id": "40099",
+                    "wks_eebo_url": "http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&res_id=xri:eebo&rft_id=xri:eebo:image:40099",
+                    "wks_estc_number": "B5",
+                    "wks_last_trawled": "1976-04-13",
+                    "wks_marc_record": "A29730",
+                    "wks_organizational_unit": 0,
+                    "wks_primary_print_font": 24,
+                    "wks_pub_date": "1681",
+                    "wks_publisher": "Dublin : Printed by Benjamin Took and John Crook, and are to be sold by Mary Crook & Andrew Crook ..., 1681.",
+                    "wks_tcp_bibno": 7708772,
+                    "wks_tcp_number": "A29730",
+                    "wks_title": "A dissuasive from popery sent in a letter from A.B. to C.D.",
+                    "wks_word_count": null
+                }
+            },
+            "proc_id": null,
+            "results": null,
+            "status": {
+                "id": 1,
+                "name": "Not Started"
+            },
+            "tries": 0,
+            "work": {
+                "id": 5,
+                "wks_author": "A. B.",
+                "wks_bib_name": null,
+                "wks_book_id": null,
+                "wks_ecco_corrected_text_path": "/data/shared/text-xml/EEBO-TCP-document-text/e0006/40099.txt",
+                "wks_ecco_corrected_xml_path": null,
+                "wks_ecco_directory": null,
+                "wks_ecco_gale_ocr_xml_path": "",
+                "wks_ecco_number": null,
+                "wks_ecco_uncorrected_gale_ocr_path": null,
+                "wks_eebo_citation_id": 7708772,
+                "wks_eebo_directory": "/data/eebo/e0006/40099",
+                "wks_eebo_image_id": "40099",
+                "wks_eebo_url": "http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&res_id=xri:eebo&rft_id=xri:eebo:image:40099",
+                "wks_estc_number": "B5",
+                "wks_last_trawled": "1976-04-13",
+                "wks_marc_record": "A29730",
+                "wks_organizational_unit": 0,
+                "wks_primary_print_font": 24,
+                "wks_pub_date": "1681",
+                "wks_publisher": "Dublin : Printed by Benjamin Took and John Crook, and are to be sold by Mary Crook & Andrew Crook ..., 1681.",
+                "wks_tcp_bibno": 7708772,
+                "wks_tcp_number": "A29730",
+                "wks_title": "A dissuasive from popery sent in a letter from A.B. to C.D.",
+                "wks_word_count": null
+            }
+        }
+    ],
+    "subtotal": 2,
+    "total": 2,
+    "total_pages": 1
+}

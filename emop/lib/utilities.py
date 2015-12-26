@@ -50,6 +50,7 @@ def mkdirs_exists_ok(path):
         if exception.errno != errno.EEXIST:
             raise
 
+
 def exec_cmd(cmd, log_level="info", timeout=-1):
     """Executes a command
 

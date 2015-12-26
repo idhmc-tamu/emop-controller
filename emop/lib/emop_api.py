@@ -42,6 +42,7 @@ class EmopAPI(object):
 
         if get_r.status_code == requests.codes.ok:
             json_data = get_r.json()
+            logger.debug("DATA:\n%s", json.dumps(json_data))
         else:
             logger.error("GET %s failed with error code %s" % (full_url, get_r.status_code))
         return json_data

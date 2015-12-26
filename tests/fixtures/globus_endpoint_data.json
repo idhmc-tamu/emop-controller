@@ -1,0 +1,30 @@
+{
+  "username": "go", 
+  "globus_connect_setup_key": null, 
+  "name": "ep1", 
+  "DATA_TYPE": "endpoint", 
+  "activated": true, 
+  "is_globus_connect": false, 
+  "ls_link": {
+    "href": "endpoint/go%23ep1/ls?format=json", 
+    "resource": "directory_listing", 
+    "DATA_TYPE": "link", 
+    "rel": "child", 
+    "title": "child directory_listing"
+  }, 
+  "canonical_name": "go#ep1", 
+  "myproxy_server": "myproxy.globusonline.org", 
+  "expire_time": "2011-06-28 18:22:17", 
+  "DATA": [
+    {
+      "DATA_TYPE": "server", 
+      "hostname": "ec2-50-16-95-116.compute-1.amazonaws.com", 
+      "uri": "gsiftp://ec2-50-16-95-116.compute-1.amazonaws.com:2811", 
+      "scheme": "gsiftp", 
+      "port": 2811, 
+      "subject": "/DC=org/DC=doegrids/OU=Services/CN=host/endpoint1.tutorial.globusonline.org"
+    }
+  ], 
+  "public": true, 
+  "description": null
+}

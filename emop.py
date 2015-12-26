@@ -10,18 +10,25 @@ from emop.emop_query import EmopQuery
 from emop.emop_submit import EmopSubmit
 from emop.emop_run import EmopRun
 from emop.emop_upload import EmopUpload
+from emop.emop_transfer import EmopTransfer
+
 
 # Needed to prevent the _JAVA_OPTIONS value from breaking some of
 # the post processes that use Java
 if os.environ.get("_JAVA_OPTIONS"):
     del os.environ["_JAVA_OPTIONS"]
+# TODO: Remove once verified globus API 0.10.18 removes need to disable proxy usage
+# if os.environ.get("HTTPS_PROXY"):
+#     del os.environ["HTTPS_PROXY"]
+# if os.environ.get("https_proxy"):
+#     del os.environ["https_proxy"]
 
 
 def query(args, parser):
     emop_query = EmopQuery(args.config_path)
     # --pending-pages
     if args.query_pending_pages:
-        pending_pages = emop_query.pending_pages(q_filter=args.filter)
+        pending_pages = emop_query.pending_pages_count(q_filter=args.filter)
         if pending_pages == 0 or pending_pages:
             print("Number of pending pages: %s" % pending_pages)
         else:
@@ -60,7 +67,7 @@ def submit(args, parser):
 
     emop_submit = EmopSubmit(args.config_path)
     emop_query = EmopQuery(args.config_path)
-    pending_pages = emop_query.pending_pages(q_filter=args.filter)
+    pending_pages = emop_query.pending_pages_count(q_filter=args.filter)
 
     # Exit if no pages to run
     if pending_pages == 0:
@@ -88,13 +95,27 @@ def submit(args, parser):
     if args.submit_simulate:
         sys.exit(0)
 
+    # Verify transfers are possible
+    emop_transfer = EmopTransfer(args.config_path)
+    endpoint_check = emop_transfer.check_endpoints(fail_on_warn=True)
+    if not endpoint_check:
+        print("ERROR: Not all endpoints are activated or activation expires soon.")
+        sys.exit(1)
+
     # Loop that performs the actual submission
+    proc_ids = []
     for i in xrange(num_jobs):
         proc_id = emop_submit.reserve(num_pages=pages_per_job, r_filter=args.filter)
         if not proc_id:
-            print("Failed to reserve page")
-            sys.exit(1)
-        emop_submit.scheduler.submit_job(proc_id=proc_id, num_pages=pages_per_job)
+            print("ERROR: Failed to reserve page")
+            continue
+        proc_ids.append(proc_id)
+
+    if proc_ids:
+        task_id = emop_transfer.stage_in_proc_ids(proc_ids=proc_ids, wait=False)
+        transfer_job_id = emop_submit.scheduler.submit_transfer_job(task_id=task_id)
+        for proc_id in proc_ids:
+            emop_submit.scheduler.submit_job(proc_id=proc_id, num_pages=pages_per_job, dependency=transfer_job_id)
     sys.exit(0)
 
 
@@ -115,6 +136,102 @@ def run(args, parser):
         sys.exit(0)
     else:
         sys.exit(1)
+
+
+def transfer_status(args, parser):
+    """
+    Check health of transfer system
+    """
+    emop_transfer = EmopTransfer(args.config_path)
+    if args.task_id:
+        status = emop_transfer.display_task(task_id=args.task_id, wait=args.wait)
+    else:
+        status = emop_transfer.check_endpoints()
+
+    if status:
+        sys.exit(0)
+    else:
+        sys.exit(1)
+
+
+def transfer_in(args, parser):
+    """
+    Transfers files from remote -> cluster
+    """
+    emop_transfer = EmopTransfer(args.config_path)
+    endpoint_check = emop_transfer.check_endpoints()
+    if not endpoint_check:
+        print("ERROR: Not all endpoints are activated.")
+        sys.exit(1)
+    if args.filter:
+        emop_query = EmopQuery(args.config_path)
+        pending_pages = emop_query.pending_pages(q_filter=args.filter)#, r_filter='page.pg_image_path,pg_ground_truth_file')
+        task_id = emop_transfer.stage_in_data(data=pending_pages, wait=args.wait)
+        if task_id:
+            print("Transfer submitted: %s", task_id)
+        else:
+            print("ERROR: Failed to submit transfer")
+    if task_id:
+        sys.exit(0)
+    else:
+        sys.exit(1)
+
+
+def transfer_out(args, parser):
+    """
+    Transfer files from cluster -> remote
+    """
+    emop_transfer = EmopTransfer(args.config_path)
+    endpoint_check = emop_transfer.check_endpoints()
+    if not endpoint_check:
+        print("ERROR: Not all endpoints are activated.")
+    if args.proc_id:
+        task_id = emop_transfer.stage_out_proc_id(proc_id=args.proc_id)
+
+    if task_id:
+        print("Transfer submitted: %s" % task_id)
+        sys.exit(0)
+    else:
+        print("ERROR: Failed to submit transfer")
+        sys.exit(1)
+
+
+def transfer_test(args, parser):
+    """
+    Test a transfer
+    """
+    _fail = False
+    emop_transfer = EmopTransfer(args.config_path)
+    status = emop_transfer.check_endpoints()
+    if not status:
+        sys.exit(1)
+
+    ls_test_path = '/~/'
+    print("Testing ls ability of %s:%s" % (emop_transfer.cluster_endpoint, ls_test_path))
+    cluster_ls_data = emop_transfer.ls(emop_transfer.cluster_endpoint, ls_test_path)
+    if not cluster_ls_data:
+        print("ERROR: ls of %s:%s" % (emop_transfer.cluster_endpoint, ls_test_path))
+        _fail = True
+    print("Testing ls ability of %s:%s" % (emop_transfer.remote_endpoint, ls_test_path))
+    remote_ls_data = emop_transfer.ls(emop_transfer.remote_endpoint, ls_test_path)
+    if not remote_ls_data:
+        print("ERROR: ls of %s:%s" % (emop_transfer.remote_endpoint, ls_test_path))
+        _fail = True
+
+    if _fail:
+        sys.exit(1)
+
+    print("Generating test files")
+    test_input = "~/test-in.txt"
+    test_output = "~/test-out.txt"
+    test_input_path = os.path.expanduser(test_input)
+    test_file = open(test_input_path, "w+")
+    test_file.write("TEST")
+    test_file.close()
+
+    transfer_data = [{"src": test_input, "dest": test_output}]
+    task_id = emop_transfer.start(src=emop_transfer.cluster_endpoint, dest=emop_transfer.remote_endpoint, data=transfer_data, label="emop-test", wait=args.wait)
+    emop_transfer.display_task(task_id=task_id)
 
 
 def upload(args, parser):
@@ -174,13 +291,19 @@ def testrun(args, parser):
 default_config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'config.ini')
 
 # Define command line options
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 subparsers = parser.add_subparsers(dest='mode')
 parser_query = subparsers.add_parser('query')
 parser_submit = subparsers.add_parser('submit')
 parser_run = subparsers.add_parser('run')
 parser_upload = subparsers.add_parser('upload')
 parser_testrun = subparsers.add_parser('testrun')
+parser_transfer = subparsers.add_parser('transfer')
+subparsers_transfer = parser_transfer.add_subparsers(dest='transfer_mode')
+parser_transfer_status = subparsers_transfer.add_parser('status')
+parser_transfer_out = subparsers_transfer.add_parser('out')
+parser_transfer_in = subparsers_transfer.add_parser('in')
+parser_transfer_test = subparsers_transfer.add_parser('test')
 
 proc_id_args = '--proc-id',
 proc_id_kwargs = {
@@ -196,6 +319,14 @@ filter_kwargs = {
     'action': 'store',
     'default': '{}',
     'type': json.loads
+}
+wait_args = '--wait',
+wait_kwargs = {
+    'help': 'number of seconds to wait for process to finish',
+    'dest': 'wait',
+    'action': 'store',
+    'default': 0,
+    'type': int
 }
 
 # Global config options
@@ -260,6 +391,24 @@ upload_group.add_argument('--upload-dir',
                           action='store',
                           type=str)
 parser_upload.set_defaults(func=upload)
+# transfer status args
+parser_transfer_status.add_argument(*wait_args, **wait_kwargs)
+parser_transfer_status.add_argument('--task-id',
+                                    help='task ID to query',
+                                    dest='task_id',
+                                    action='store',
+                                    type=str)
+parser_transfer_status.set_defaults(func=transfer_status)
+# transfer in args
+parser_transfer_in.add_argument(*filter_args, **filter_kwargs)
+parser_transfer_in.add_argument(*wait_args, **wait_kwargs)
+parser_transfer_in.set_defaults(func=transfer_in)
+# transfer out args
+parser_transfer_out.add_argument(*proc_id_args, **proc_id_kwargs)
+parser_transfer_out.set_defaults(func=transfer_out)
+# transfer test args
+parser_transfer_test.add_argument(*wait_args, **wait_kwargs)
+parser_transfer_test.set_defaults(func=transfer_test)
 # testrun args
 parser_testrun.add_argument(*filter_args, **filter_kwargs)
 parser_testrun.add_argument('--num-pages',
